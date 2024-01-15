@@ -1,6 +1,8 @@
 import home from './home';
 import header from './header';
 import menu from './menu';
+import about from './about';
+import contact from './contact';
 
 
 function displayController() {
@@ -27,14 +29,17 @@ function displayController() {
             content.appendChild(home());
         } else if (e.target.textContent === 'Menu') {
             content.appendChild(menu());
-        }
+        } else if (e.target.textContent === 'About') {
+            content.appendChild(about());
+        } else if (e.target.textContent === 'Contact') {
+            content.appendChild(contact());
+        } else content.appendChild(home());
     };
 
     nav.map(item => {
         item.addEventListener('click', (e) => handleLoad(e));
     });
-
-
+    document.querySelector('.logo').addEventListener('click', (e) => handleLoad(e));
 
 }
 

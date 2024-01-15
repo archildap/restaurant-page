@@ -22,6 +22,7 @@ export default function header() {
     menuNav.classList.add('nav', 'nav-menu');
     aboutNav.classList.add('nav', 'nav-about');
     contactNav.classList.add('nav', 'nav-contact');
+    logo.classList.add('logo');
 
     navigation.appendChild(homeNav);
     navigation.appendChild(menuNav);
