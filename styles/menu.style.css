@@ -1,5 +1,6 @@
 #menu-section {
     padding-top: 20vh;
+    padding-bottom: 20px;
     background: linear-gradient(to top, #e2fffd 0%, #ffe7f0 100%);
     width: 100%;
     display: grid;
@@ -12,6 +13,7 @@
 }
 
 .menu-card {
+    background: #F7EBE8;
     padding: 20px;
     border-bottom: 3px solid rgb(237, 152, 56);
     box-shadow: 0px 0px 3px 0px rgba(157, 157, 157, 0.544);
@@ -35,6 +37,10 @@
     border-radius: 100% 100% 100% 100%;
 }
 
+.menu-card:last-child {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
 
 @media only screen and (max-width: 1024px) {
     .menu-card img {
@@ -54,5 +60,15 @@
 @media only screen and (max-width: 768px) {
     #menu-section {
         grid-template-columns: 40% 40%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #menu-section {
+        grid-template-columns: 60%;
+    }
+
+    .menu-card:last-child {
+        grid-area: auto;
     }
 }

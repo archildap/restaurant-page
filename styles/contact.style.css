@@ -2,7 +2,7 @@
     width: 100%;
     min-height: 100vh;
     color: black;
-    padding: 20px;
+    padding-bottom: 20px;
     padding-top: 20vh;
     background: rgba(11, 182, 168, 0.1);
     display: grid;
@@ -41,6 +41,7 @@
 }
 
 .submit {
+    min-width: 70px;
     width: 20%;
     border-radius: 5px;
     background: rgb(17, 252, 221);
@@ -108,5 +109,28 @@
 
     #contact-section label {
         font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #contact-section {
+        grid-template-columns: 90%;
+        grid-template-rows: 50% 50%;
+    }
+
+    #contact-section h2 {
+        font-size: 1rem;
+    }
+
+    #contact-section input {
+        font-size: 0.6rem;
+    }
+
+    #contact-section label {
+        font-size: 0.6rem;
+    }
+
+    #contact-section form {
+        padding: 10px;
     }
 }
