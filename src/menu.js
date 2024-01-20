@@ -1,3 +1,4 @@
+import '../styles/menu.style.css';
 import hamPepperoni from '../images/ham-pepperoni.jpg';
 import cheesePizza from '../images/cheese-pizza.jpg';
 import hawaiian from '../images/hawaiian.jpg';

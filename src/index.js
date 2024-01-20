@@ -11,6 +11,10 @@ function displayController() {
     const initialLoad = () => {
         content.appendChild(header());
         content.appendChild(home());
+        document.querySelector('#home-section>.btn').addEventListener('click', () => {
+            clearPage();
+            content.appendChild(contact());
+        });
     }
 
     initialLoad();
@@ -27,6 +31,10 @@ function displayController() {
         clearPage();
         if (e.target.textContent === 'Home') {
             content.appendChild(home());
+            document.querySelector('#home-section>.btn').addEventListener('click', () => {
+                clearPage();
+                content.appendChild(contact());
+            });
         } else if (e.target.textContent === 'Menu') {
             content.appendChild(menu());
         } else if (e.target.textContent === 'About') {

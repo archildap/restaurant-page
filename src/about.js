@@ -1,9 +1,11 @@
 import restaurantImg from '../images/rest-background.jpg';
+import '../styles/about.style.css';
 
 
 
 export default function about() {
     const aboutPage = document.createElement('div');
+    const aboutText = document.createElement('div');
     const title = document.createElement('h3');
     const aboutPar = document.createElement('p');
     const restImg = new Image();
@@ -15,8 +17,9 @@ export default function about() {
 
     aboutPage.setAttribute('id', 'about-section');
 
-    aboutPage.appendChild(title);
-    aboutPage.appendChild(aboutPar);
+    aboutText.appendChild(title);
+    aboutText.appendChild(aboutPar);
+    aboutPage.appendChild(aboutText);
     aboutPage.appendChild(restImg);
 
     return aboutPage;

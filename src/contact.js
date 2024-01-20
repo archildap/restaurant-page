@@ -1,4 +1,5 @@
 import restImage from '../images/contact-img.jpg';
+import '../styles/contact.style.css';
 
 function fieldMaker(fieldLabel, inputType, idName) {
     const fieldLi = document.createElement('li');
@@ -43,10 +44,11 @@ export default function contact() {
 
     imgSection.appendChild(restImg);
     form.appendChild(reservationHeader);
-    formUl.appendChild(fieldMaker('FIRST NAME', 'text', 'first-name'));
+    formUl.appendChild(fieldMaker('FIRST NAME', 'text', 'first-name')).focus();
     formUl.appendChild(fieldMaker('LAST NAME', 'text', 'last-name'));
     formUl.appendChild(fieldMaker('PHONE NUMBER', 'tel', 'phone-number'));
-    formUl.appendChild(fieldMaker('RESERVATION TIME', 'datetime-local', 'res-time'));
+    formUl.appendChild(fieldMaker('RESERVATION DATE', 'date', 'res-date'));
+    formUl.appendChild(fieldMaker('RESERVATION TIME', 'time', 'res-time'));
     formUl.appendChild(fieldMaker('NUMBER OF PEOPLE', 'number', 'num-people'));
 
 
@@ -54,6 +56,7 @@ export default function contact() {
     form.appendChild(submitBtn);
     contactPage.appendChild(imgSection);
     contactPage.appendChild(form);
+
 
     form.querySelector('input[type="number"]').setAttribute('min', '1');
     form.querySelector('input[type="number"]').setAttribute('max', '10');

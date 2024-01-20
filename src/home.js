@@ -1,4 +1,4 @@
-import './style.css';
+import '../styles/home.style.css';
 
 export default function home() {
     const homePage = document.createElement('div');
